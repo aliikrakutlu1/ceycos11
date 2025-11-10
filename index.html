@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEYCOS</title> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0e6f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .message {
+            font-size: 3rem;
+            color: #e6007e;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        button {
+            background-color: #e6007e;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff3399;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="message">CEYCOS!</div> 
+        <button onclick="changeMessage()">Buraya bas sipa</button> 
+    </div>
+
+    <script>
+        function changeMessage() {
+            const messages = [
+                "Seni ÇOOOK Seviyorum!", 
+                "Her Zaman Yanındayım!",
+                "SIPAAAAM",   
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.querySelector('.message').textContent = randomMessage;
+        }
+    </script>
+</body>
+</html>
